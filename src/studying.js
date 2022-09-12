@@ -14,7 +14,6 @@ export default class StudyAction {
 
   removeBrainStats () {
     if (this.brainPower > 0) {
-      brainPower = document.getElementById("brainStats").value;
       brainPower - 5;
     }
   }

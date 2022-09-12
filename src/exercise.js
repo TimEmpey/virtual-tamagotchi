@@ -14,7 +14,6 @@ export default class ExerciseAction {
 
   removeFitnessStats () {
     if (this.fitness > 0) {
-      fitness = document.getElementById("fitness").value;
       fitness - 5;
     }
   }
