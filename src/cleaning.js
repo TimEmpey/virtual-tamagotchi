@@ -1,6 +1,7 @@
 export default class CleaningAction {
-  constructor(happinessLevel) {
+  constructor(happinessLevel, poopLog) {
     this.happiness = happinessLevel;
+    this.poopLog = poopLog;
   }
 
   handlePoop() {
@@ -9,11 +10,12 @@ export default class CleaningAction {
     let rand = Math.floor(Math.random() * (max - min + 1) + min); 
     setTimeout(rand * 1000);
     this.happiness -= 5;
+    this.poopLog += 1;
 }
 
   handleCleaning (active) {
     this.active = active;
-    if (this.happiness < 20) {
+    if (this.poopLog >= 1) {
       this.active = true;
       this.happiness += 5;
     } else {
@@ -21,9 +23,9 @@ export default class CleaningAction {
     }
   }
 
-  removeHappinessStats () {
+  removeHappinessStats() {
     if (this.happiness > 0) {
-      happiness - 5;
+      happiness -= 5;
     }
   }
 }
