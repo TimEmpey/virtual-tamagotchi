@@ -14,7 +14,7 @@ export default class StudyAction {
 
   removeBrainStats () {
     if (this.brainPower > 0) {
-      brainPower - 5;
+      brainPower -= 5;
     }
   }
 

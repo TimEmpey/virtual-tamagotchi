@@ -14,7 +14,7 @@ export default class EatingAction {
 
   removeHungerStats () {
     if (this.hunger > 0) {
-      hunger - 5;
+      hunger -= 5;
     }
   }
 }
