@@ -3,7 +3,8 @@ export default class StudyAction {
     this.brainPower = brainPower;
   }
 
-  handleStudying (brainPower, active) {
+  handleStudying (active) {
+    this.active = active;
     if (this.brainPower <= 20) {
       active = true;
       this.brainPower += 5;
@@ -14,6 +15,10 @@ export default class StudyAction {
 
   removeBrainStats () {
     if (this.brainPower > 0) {
+      let min = 60;
+      let max = 180;
+      let rand = Math.floor(Math.random() * (max - min + 1) + min); 
+      setTimeout(rand * 1000);
       brainPower -= 5;
     }
   }

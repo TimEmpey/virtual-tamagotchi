@@ -3,7 +3,8 @@ export default class EatingAction {
     this.hunger = hunger;
   }
 
-  handleEating (hunger, active) {
+  handleEating (active) {
+    this.active = active
     if (this.hunger <= 20) {
       active = true;
       this.hunger += 5;
@@ -14,6 +15,10 @@ export default class EatingAction {
 
   removeHungerStats () {
     if (this.hunger > 0) {
+      let min = 60;
+      let max = 180;
+      let rand = Math.floor(Math.random() * (max - min + 1) + min); 
+      setTimeout(rand * 1000);
       hunger -= 5;
     }
   }
