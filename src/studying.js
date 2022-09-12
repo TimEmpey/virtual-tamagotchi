@@ -6,8 +6,9 @@ export default class StudyAction {
   handleStudying () {
     if (this.brainPower <= 20) {
       this.brainPower += 5;
+      return this.brainPower;
     } else {
-      return false;
+      return this.brainPower;
     }
   }
 

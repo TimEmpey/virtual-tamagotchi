@@ -6,8 +6,9 @@ export default class EatingAction {
   handleEating () {
     if (this.hunger <= 20) {
       this.hunger += 5;
+      return this.hunger;
     } else {
-      return false;
+      return this.hunger;
     }
   }
 

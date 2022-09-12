@@ -6,8 +6,9 @@ export default class ExerciseAction {
   handleExercise () {
     if (this.fitness <= 20) {
       this.fitness += 5;
+      return this.fitness;
     } else {
-      return false;
+      return this.fitness;
     }
   }
 

@@ -16,8 +16,9 @@ export default class CleaningAction {
   handleCleaning () {
     if (this.poopLog >= 1) {
       this.happiness += 5;
+      return this.handleCleaning
     } else {
-      return false;
+      return this.handleCleaning;
     }
   }
 }
