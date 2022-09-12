@@ -3,13 +3,11 @@ export default class StudyAction {
     this.brainPower = brainPower;
   }
 
-  handleStudying (active) {
-    this.active = active;
+  handleStudying () {
     if (this.brainPower <= 20) {
-      active = true;
       this.brainPower += 5;
     } else {
-      active = false;
+      return false;
     }
   }
 

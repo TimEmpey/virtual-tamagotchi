@@ -3,13 +3,11 @@ export default class EatingAction {
     this.hunger = hunger;
   }
 
-  handleEating (active) {
-    this.active = active
+  handleEating () {
     if (this.hunger <= 20) {
-      active = true;
       this.hunger += 5;
     } else {
-      active = false;
+      return false;
     }
   }
 

@@ -3,12 +3,11 @@ export default class ExerciseAction {
     this.fitness = fitness;
   }
 
-  handleExercise (active) {
-    this.active = active;
+  handleExercise () {
     if (this.fitness <= 20) {
       this.fitness += 5;
     } else {
-      active = false;
+      return false;
     }
   }
 

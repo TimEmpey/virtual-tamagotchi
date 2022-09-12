@@ -13,13 +13,11 @@ export default class CleaningAction {
     this.poopLog += 1;
 }
 
-  handleCleaning (active) {
-    this.active = active;
+  handleCleaning () {
     if (this.poopLog >= 1) {
-      this.active = true;
       this.happiness += 5;
     } else {
-      this.active = false;
+      return false;
     }
   }
 }
