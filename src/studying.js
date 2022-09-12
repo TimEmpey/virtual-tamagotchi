@@ -17,7 +17,7 @@ export default class StudyAction {
       let max = 180;
       let rand = Math.floor(Math.random() * (max - min + 1) + min); 
       setTimeout(rand * 1000);
-      brainPower -= 5;
+      this.brainPower -= 5;
     }
   }
 

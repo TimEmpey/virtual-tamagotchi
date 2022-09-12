@@ -17,7 +17,7 @@ export default class ExerciseAction {
       let max = 180;
       let rand = Math.floor(Math.random() * (max - min + 1) + min); 
       setTimeout(rand * 1000);
-      fitness -= 5;
+      this.fitness -= 5;
     }
   }
 }

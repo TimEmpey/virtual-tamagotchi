@@ -17,7 +17,7 @@ export default class EatingAction {
       let max = 180;
       let rand = Math.floor(Math.random() * (max - min + 1) + min); 
       setTimeout(rand * 1000);
-      hunger -= 5;
+      this.hunger -= 5;
     }
   }
 }
