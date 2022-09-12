@@ -22,10 +22,4 @@ export default class CleaningAction {
       this.active = false;
     }
   }
-
-  removeHappinessStats() {
-    if (this.happiness > 0) {
-      happiness -= 5;
-    }
-  }
 }
