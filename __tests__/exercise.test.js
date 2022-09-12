@@ -1,4 +1,3 @@
-import { TestScheduler } from "jest";
 import ExerciseAction from "../src/exercise";
 
 describe('ExerciseAction', () => {
