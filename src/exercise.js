@@ -13,9 +13,8 @@ export default class ExerciseAction {
   }
 
   removeFitnessStats () {
-    console.log(this.fitness)
     if (this.fitness > 0) {
-      this.fitness -= 2.5;
+      this.fitness -= 5;
       return this.fitness;
     } else {
       return this.fitness;

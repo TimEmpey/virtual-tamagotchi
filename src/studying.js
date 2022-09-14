@@ -13,9 +13,8 @@ export default class StudyAction {
   }
 
   removeBrainStats () {
-    console.log(this.brainPower)
     if (this.brainPower > 0) {
-      this.brainPower -= 2.5;
+      this.brainPower -= 5;
       return this.brainPower;
     } else {
       return this.brainPower;

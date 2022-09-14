@@ -18,26 +18,22 @@ function startGame (e) {
 }
 
 function setTimer() {
-  setInterval(() => happiness(), 60000);
-  setInterval(() => fitness(), 45000);
-  setInterval(() => hunger(), 30000);
-  setInterval(() => brainPower(), 70000);
+  setInterval(() => happiness(), 18000);
+  setInterval(() => fitness(), 14000);
+  setInterval(() => hunger(), 10000);
+  setInterval(() => brainPower(), 22000);
 }
 
 function happiness() {
-  newTomagotchi.happiness.handlePoop();
   removeStats(true, false, false, false);
 }
 function fitness() {
-  newTomagotchi.fitness.removeFitnessStats();
   removeStats(false, true, false, false);
 }
 function hunger() {
-  newTomagotchi.hunger.removeHungerStats();
   removeStats(false, false, true, false);
 }
 function brainPower() {
-  newTomagotchi.brainPower.removeBrainStats();
   removeStats(false, false, false, true);
 }
 
