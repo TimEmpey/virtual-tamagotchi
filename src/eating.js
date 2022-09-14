@@ -13,11 +13,8 @@ export default class EatingAction {
   }
 
   removeHungerStats () {
+    console.log(this.hunger);
     if (this.hunger > 0) {
-      let min = 60;
-      let max = 180;
-      let rand = Math.floor(Math.random() * (max - min + 1) + min); 
-      setTimeout(rand * 1000);
       this.hunger -= 5;
     }
   }

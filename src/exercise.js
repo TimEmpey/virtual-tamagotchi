@@ -1,6 +1,7 @@
 export default class ExerciseAction {
   constructor(fitness) {
     this.fitness = fitness;
+    console.log(this.fitness);
   }
 
   handleExercise () {
@@ -13,11 +14,9 @@ export default class ExerciseAction {
   }
 
   removeFitnessStats () {
-    if (this.fitness > 0) {
-      let min = 60;
-      let max = 180;
-      let rand = Math.floor(Math.random() * (max - min + 1) + min); 
-      setTimeout(rand * 1000);
+    console.log(this.fitness)
+// TODO Band aid solution
+    if (isNaN(this.fitness)) {
       this.fitness -= 5;
     }
   }

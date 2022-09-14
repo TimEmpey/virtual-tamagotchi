@@ -5,14 +5,14 @@ export default class CleaningAction {
   }
 
   handlePoop() {
-      let min = 60;
-      let max = 180;
-      let rand = Math.floor(Math.random() * (max - min + 1) + min); 
-      setTimeout(rand * 1000);
-      this.happiness -= 5;
-      this.poopLog += 1;
-      return this.happiness;
-}
+    let min = 60;
+    let max = 180;
+    let rand = Math.floor(Math.random() * (max - min + 1) + min); 
+    setTimeout(rand * 10000);
+    this.happiness -= 5;
+    this.poopLog += 1;
+    return this.happiness;
+  }
 
   handleCleaning () {
     if (this.poopLog >= 1 && this.happiness <= 20) {
