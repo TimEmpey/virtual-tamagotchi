@@ -5,7 +5,6 @@ export default class CleaningAction {
   }
 
   handlePoop() {
-    console.log(this.happiness)
     if (this.happiness > 0){
     this.happiness -= 5;
     this.poopLog += 1;

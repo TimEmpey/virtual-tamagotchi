@@ -8,35 +8,46 @@ let newTomagotchi = new Health(100, 25, 0, 25, 25, 25);
 
 function startGame (e) {
   e.preventDefault();
-  document.getElementById("startButton").setAttribute("class", "hiddenStart");
+  document.getElementById("startButton").setAttribute("class", "hidden");
   document.getElementById("hideGame").removeAttribute("class");
   document.querySelector("span#totalHealth").innerText = 100;
   document.querySelector("span#happinessLevel").innerText = 25;
   document.querySelector("span#fitnessLevel").innerText = 25;
   document.querySelector("span#brainLevel").innerText = 25;
   document.querySelector("span#hungerLevel").innerText = 25;
+  document.getElementById("gameOver").setAttribute("class", "hidden");
   choosePic();
   setTimer();
 }
 
+function gameOver () {
+  if (newTomagotchi.totalHealth === 0) {
+    document.getElementById("gameOver").removeAttribute("class");
+  }
+}
+
 function setTimer() {
-  setInterval(() => happiness(), 18000); 
-  setInterval(() => fitness(), 14000);
-  setInterval(() => hunger(), 10000);
-  setInterval(() => brainPower(), 22000);
+  setInterval(() => happiness(), 1000); 
+  setInterval(() => fitness(), 1000);
+  setInterval(() => hunger(), 1000);
+  setInterval(() => brainPower(), 1000);
 }
 
 function happiness() {
   removeStats(true, false, false, false);
+  gameOver();
 }
 function fitness() {
   removeStats(false, true, false, false);
+  gameOver();
 }
 function hunger() {
   removeStats(false, false, true, false);
+  gameOver();
 }
 function brainPower() {
   removeStats(false, false, false, true);
+  gameOver();
 }
 
 function removeStats (happiness, fitness, hunger, brainPower) {
