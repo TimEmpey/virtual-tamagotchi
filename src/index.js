@@ -8,6 +8,8 @@ let newTomagotchi = new Health(100, 25, 0, 25, 25, 25);
 
 function startGame (e) {
   e.preventDefault();
+  document.getElementById("startButton").setAttribute("class", "hiddenStart");
+  document.getElementById("hideGame").removeAttribute("class");
   document.querySelector("span#totalHealth").innerText = 100;
   document.querySelector("span#happinessLevel").innerText = 25;
   document.querySelector("span#fitnessLevel").innerText = 25;
