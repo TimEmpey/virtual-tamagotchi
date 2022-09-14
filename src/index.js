@@ -18,7 +18,7 @@ function startGame (e) {
 }
 
 function setTimer() {
-  setInterval(() => happiness(), 18000);
+  setInterval(() => happiness(), 18000); 
   setInterval(() => fitness(), 14000);
   setInterval(() => hunger(), 10000);
   setInterval(() => brainPower(), 22000);

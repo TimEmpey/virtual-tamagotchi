@@ -1,0 +1,128 @@
+body {
+  background-color: lightblue;
+  color: white;
+}
+
+img{
+  height: 400px;
+}
+
+/* .hidden{
+  display: none;
+} */
+
+/* .hiddenStart{
+  display: none;
+} */
+
+.game {
+  width: 68%;
+  height: 68%;
+}
+
+.bin {
+  position: relative;
+  text-align: center;
+}
+.health-level{
+  position: absolute;
+  bottom: 58%;
+  left: 42%;
+  color: purple;
+  background-color: pink;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 10px;
+  border: black solid 1.8px;
+  box-shadow: 3px 3px lightblue;
+}
+.start-game{
+  height: 70px;
+  width: 180px;
+  font-size: 26px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 30%;
+  left: 45%;
+  border-radius: 13px;
+  background-color: pink;
+  color: purple;
+  padding: 3px;
+  box-shadow: 3px 3px lightblue;
+}
+.happiness-level{
+  position: absolute;
+  bottom: 9%;
+  left: 34%;
+}
+.happiness-button {
+  position: absolute;
+  bottom: 6%;
+  left: 34%;
+  border-radius: 13px;
+  background-color: pink;
+  color: purple;
+  padding: 3px;
+  box-shadow: 3px 3px lightblue;
+}
+.fitness-level{
+  position: absolute;
+  bottom: 9%;
+  left: 43%;
+}
+.fitness-button{
+  position: absolute;
+  bottom: 6%;
+  left: 43%;
+  border-radius: 13px;
+  background-color: pink;
+  color: purple;
+  padding: 3px;
+  box-shadow: 3px 3px lightblue;
+}
+.hunger-level{
+  position: absolute;
+  bottom: 9%;
+  left: 51%;
+}
+.hunger-button{
+  position: absolute;
+  bottom: 6%;
+  left: 51%;
+  border-radius: 13px;
+  background-color: pink;
+  color: purple;
+  padding: 3px;
+  box-shadow: 3px 3px lightblue;
+}
+.brain-level{
+  position: absolute;
+  bottom: 9%;
+  left: 60%;
+}
+.brain-button{
+  position: absolute;
+  bottom: 6%;
+  left: 58%;
+  border-radius: 13px;
+  background-color: pink;
+  color: purple;
+  padding: 3px;
+  box-shadow: 3px 3px lightblue;
+}
+.tom-image{
+  position: absolute;
+  bottom: 16%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}

@@ -44,12 +44,13 @@ module.exports = {
       },
       
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      }
-    ]
-  }
+        "test": /\.scss$/,
+        "loaders": ["style", "css", "sass?sourceMap"]
+    },
+    { 
+        test: /\.jpg$/, 
+        loader: "file-loader" 
+    }
+]
+}
 };

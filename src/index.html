@@ -4,23 +4,22 @@
   <title>Virtual Tom-agotchi</title>
 </head>
 <body>
-
-  <h1>Get a random Tom and treat him right</h1>
-  <button id="startButton" class="star-game btn btn-light">Start Game</button>
-
-  <div class="hidden">
-    <h2 id="health" >Health: <span id="totalHealth"></span>%</h2>
-    <h4 id="happiness" >Happiness: <span id="happinessLevel"></span></h4>
-    <h4 id="fitness">Fitness: <span id="fitnessLevel"></span></h4>
-    <h4 id="brain">Brain: <span id="brainLevel"></span></h4>
-    <h4 id="hunger">Hunger: <span id="hungerLevel"></span></h4>
-    
-    <span id="tom-pic" text-align="center"></span>
-    
-    <button id="cleaningButton" type="button" class="happiness">Flush The Poop!</button>
-    <button id="exerciseButton" type="button" class="fitness">Get Shredded!</button>
-    <button id="studyingButton" type="button" class="brain">Expand The Brain!</button>
-    <button id="eatingButton" type="button" class="hunger">Grub Time!</button>
+  <!-- <embed src="" loop="true" autostart="true"> -->
+  <div class="bin">
+    <img src="./images/tom-background.png" class="game">
+    <button id="startButton" class="start-game hiddenStart">Start Game</button>
+      <h2 id="health" class="health-level hidden">Health: <span id="totalHealth"></span>%</h2>
+      <h4 id="happiness" class="happiness-level hidden">Happiness: <span id="happinessLevel"></span></h4>
+      <h4 id="fitness" class="fitness-level hidden">Fitness: <span id="fitnessLevel"></span></h4>
+      <h4 id="brain" class="brain-level hidden">Brain: <span id="brainLevel"></span></h4>
+      <h4 id="hunger" class="hunger-level hidden">Hunger: <span id="hungerLevel"></span></h4>
+      
+      <span id="tom-pic" class="tom-image hidden"></span>
+      
+      <button id="cleaningButton" type="button" class="happiness-button hidden">Flush The Poop!</button>
+      <button id="exerciseButton" type="button" class="fitness-button hidden">Get Shredded!</button>
+      <button id="studyingButton" type="button" class="brain-button hidden">Expand The Brain!</button>
+      <button id="eatingButton" type="button" class="hunger-button hidden">Grub Time!</button>
   </div>
 </body>
 </html>
