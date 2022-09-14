@@ -13,13 +13,12 @@ export default class StudyAction {
   }
 
   removeBrainStats () {
+    console.log(this.brainPower)
     if (this.brainPower > 0) {
-      let min = 60;
-      let max = 180;
-      let rand = Math.floor(Math.random() * (max - min + 1) + min); 
-      setTimeout(rand * 1000);
-      this.brainPower -= 5;
+      this.brainPower -= 2.5;
+      return this.brainPower;
+    } else {
+      return this.brainPower;
     }
   }
-
 }

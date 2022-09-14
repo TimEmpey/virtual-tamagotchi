@@ -5,13 +5,15 @@ export default class CleaningAction {
   }
 
   handlePoop() {
-    let min = 60;
-    let max = 180;
-    let rand = Math.floor(Math.random() * (max - min + 1) + min); 
-    setTimeout(rand * 10000);
-    this.happiness -= 5;
-    this.poopLog += 1;
+    console.log(this.happiness)
+    if (this.happiness > 0){
+    this.happiness -= 2.5;
+    this.poopLog += .5;
+    console.log("poopLog" + this.poopLog);
     return this.happiness;
+    } else {
+    return this.happiness;
+    }
   }
 
   handleCleaning () {

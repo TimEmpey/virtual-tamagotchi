@@ -10,6 +10,5 @@ export default class Health {
     this.hunger = new EatingAction(hunger);
     this.fitness = new ExerciseAction(fitness);
     this.brainPower = new StudyingAction(brainPower);
-    console.log(this.fitness);
   }
 }

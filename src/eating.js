@@ -13,9 +13,12 @@ export default class EatingAction {
   }
 
   removeHungerStats () {
-    console.log(this.hunger);
+    console.log(this.hunger)
     if (this.hunger > 0) {
-      this.hunger -= 5;
+      this.hunger -= 2.5;
+      return this.hunger;
+    } else {
+    return this.hunger;
     }
   }
 }
