@@ -21,6 +21,13 @@ function startGame (e) {
   setTimer();
 }
 
+function choosePic() {
+  let randomNum = Math.floor(Math.random() * myPix.length);
+  const image = document.createElement("img");
+  image.src = myPix[randomNum];
+  document.querySelector("span#tom-pic").append(image);
+}
+
 function gameOver () {
   if (newTomagotchi.totalHealth === 0) {
     document.getElementById("gameOver").removeAttribute("class");
@@ -126,13 +133,6 @@ function updateStats (happiness, fitness, hunger, brainPower) {
     document.querySelector('div#brainDiv').removeAttribute("class");
     setTimeout(removeBrain, 2000);
   }
-}
-
-function choosePic() {
-  let randomNum = Math.floor(Math.random() * myPix.length);
-  const image = document.createElement("img");
-  image.src = myPix[randomNum];
-  document.querySelector("span#tom-pic").append(image);
 }
 
 function handleClickHappiness (e) {

@@ -16,6 +16,17 @@ img{
   height: 68%;
 }
 
+.shuffle {
+  position: absolute;
+  bottom: 59%;
+  display: block;
+  margin-left: 63%;
+  width: 3%;
+  height: 6%;
+  border: solid black 1px;
+  border-radius: 360px;
+}
+
 .bin {
   position: relative;
   text-align: center;
@@ -249,5 +260,5 @@ img{
   height: 16%;
   display: inline-block;
   animation: bounceOutDown;
-  animation-duration: 2s;
+  animation-duration: 2s; 
 }

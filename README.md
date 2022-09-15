@@ -1,8 +1,8 @@
-# _Template_
+# _Virtual Tomagotchi_
 
-#### By _**Tim Empey**_
+#### By _**Tim Empey, Shaniza Lingle, Ted Gold, Keisha Hepner, William Mentzer**_
 
-#### _Quicken file creation process_
+#### _Virtual Tomogotchi game with a twist_
 
 ## Technologies Used
 
@@ -14,10 +14,12 @@
 *_Jest_
 *_Babel_
 *_ES Lint_
+*_animate.css_
+*_image pixelator_
 
 ## Description
 
-_Template repo to streamline the file setup process for JS webpages with all files set up and ready for use_
+_Virtual Tomogotchi game that generates a random Tom with health, happiness, fitness, hunger, and brain power stats. However, if your virtual Tom is not taken care of then his stats will drop to 0-- leading to game over. Player must use the happiness, fitness, hunger, and brain power buttons to keep their Tom alive._
 
 ## Setup/Installation Requirements
 
@@ -33,6 +35,26 @@ _Template repo to streamline the file setup process for JS webpages with all fil
 
 ## License
 
-_[MIT](https://en.wikipedia.org/wiki/MIT_License)_ 
+_MIT License_
 
-Copyright (c) _2022_ _Timothy Empey_
+_Copyright (c) [2022] [Ted Gold, Shaniza Lingle, William Mentzer, Tim Empey, Keisha Hepner]_
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Copyright (c) _2022_ _Ted Gold, Shaniza Lingle, William Mentzer, Tim Empey, Keisha Hepner_
