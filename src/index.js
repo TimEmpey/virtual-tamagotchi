@@ -28,7 +28,7 @@ function gameOver () {
 }
 
 function setTimer() {
-  setInterval(() => happiness(), 1000); 
+  setInterval(() => happiness(), 100000); 
   setInterval(() => fitness(), 1000);
   setInterval(() => hunger(), 1000);
   setInterval(() => brainPower(), 1000);
@@ -71,6 +71,19 @@ function removeStats (happiness, fitness, hunger, brainPower) {
   }
 }
 
+function removeWeights () {
+  document.querySelector("div#weightDiv").setAttribute("class", "hidden");
+}
+
+function removeBrain () {
+  document.querySelector("div#brainDiv").setAttribute("class", "hidden");
+}
+
+function removeFood () {
+  document.querySelector("div#foodDiv").setAttribute("class", "hidden");
+}
+
+
 function updateStats (happiness, fitness, hunger, brainPower) {
   if (happiness === true) {
     document.querySelector("span#happinessLevel").innerText = newTomagotchi.happiness.handleCleaning();
@@ -80,14 +93,20 @@ function updateStats (happiness, fitness, hunger, brainPower) {
     document.querySelector("span#fitnessLevel").innerText = newTomagotchi.fitness.handleExercise();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
     document.querySelector("span#totalHealth").innerText = newTomagotchi.totalHealth;
-  } else if (hunger === true) {
+    document.querySelector('div#weightDiv').removeAttribute("class");
+    setTimeout(removeWeights, 2000);
+    } else if (hunger === true) {
     document.querySelector("span#hungerLevel").innerText = newTomagotchi.hunger.handleEating();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
     document.querySelector("span#totalHealth").innerText = newTomagotchi.totalHealth;
+    document.querySelector('div#foodDiv').removeAttribute("class");
+    setTimeout(removeFood, 2000);
   } else if (brainPower === true) {
     document.querySelector("span#brainLevel").innerText = newTomagotchi.brainPower.handleStudying();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
     document.querySelector("span#totalHealth").innerText = newTomagotchi.totalHealth;
+    document.querySelector('div#brainDiv').removeAttribute("class");
+    setTimeout(removeBrain, 2000);
   }
 }
 
@@ -121,10 +140,6 @@ function handleClickHunger (e) {
 window.addEventListener("load", function (){
   document.getElementById("startButton").addEventListener("click", startGame);
 });
-
-// window.addEventListener("load", function (){
-//   document.getElementById("restartButton").addEventListener("click", startGame);
-// });
 
 window.addEventListener("load", function (){
   document.getElementById("cleaningButton").addEventListener("click", handleClickHappiness);

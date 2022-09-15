@@ -42,15 +42,14 @@ module.exports = {
           'html-loader'
         ]
       },
-      
-      {
-        "test": /\.scss$/,
-        "loaders": ["style", "css", "sass?sourceMap"]
-    },
+    {
+      "test": /\.css$/,
+      "loaders": ["style-loader", "css-loader"]
+  },
     { 
         test: /\.jpg$/, 
         loader: "file-loader" 
     }
-]
+  ]
 }
 };

@@ -48,7 +48,6 @@ img{
   padding: 3px;
   box-shadow: 3px 3px lightblue;
 }
-
 .restart-game{
   height: 70px;
   width: 180px;
@@ -154,6 +153,78 @@ img{
   animation-timing-function: ease-in-out;
 }
 @keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
+.weights{
+  position: absolute;
+  bottom: 20%;
+  display: block;
+  margin-left: 54%;
+  height: 10%;
+  width: 10%;
+  transform: translate(-50%, -50%);
+  animation-name: weights;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes weights {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
+.brain{
+  position: absolute;
+  bottom: 43%;
+  display: block;
+  margin-left: 33%;
+  height: 11%;
+  width: 5%;
+  transform: translate(-50%, -50%);
+  animation-name: brain;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes brain {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
+.food{
+  position: absolute;
+  bottom: 40%;
+  display: block;
+  margin-left: 55%;
+  width: 6%;
+  height: 7%;
+  transform: translate(-50%, -50%);
+  animation-name: food;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes food {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
+}
+.poop{
+  position: absolute;
+  bottom: 20%;
+  display: block;
+  margin-left: 40%;
+  width: 4%;
+  height: 7%;
+  transform: translate(-50%, -50%);
+  animation-name: poop;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes poop {
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, -0px); }   
