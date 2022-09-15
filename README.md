@@ -4,6 +4,9 @@
 
 #### _Virtual Tomogotchi game with a twist_
 
+#### _Github Pages_
+_https://timempey.github.io/virtual-tamagotchi/_
+
 ## Technologies Used
 
 * _JavaScript_
