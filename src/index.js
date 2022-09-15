@@ -1,6 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
+import 'animate.css';
 import Health from "./health.js";
 import myPix from "./images.js";
 
@@ -28,8 +29,8 @@ function gameOver () {
 }
 
 function setTimer() {
-  setInterval(() => happiness(), 100000); 
-  setInterval(() => fitness(), 1000);
+  setInterval(() => fitness(), 1000000);
+  setInterval(() => happiness(), 15000); 
   setInterval(() => hunger(), 1000);
   setInterval(() => brainPower(), 1000);
 }
@@ -56,6 +57,7 @@ function removeStats (happiness, fitness, hunger, brainPower) {
     document.querySelector("span#happinessLevel").innerText = newTomagotchi.happiness.handlePoop();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
     document.querySelector("span#totalHealth").innerText = newTomagotchi.totalHealth;
+    document.querySelector("div#poopDiv").removeAttribute("class");
   } else if (fitness === true) {
     document.querySelector("span#fitnessLevel").innerText = newTomagotchi.fitness.removeFitnessStats();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
@@ -83,12 +85,28 @@ function removeFood () {
   document.querySelector("div#foodDiv").setAttribute("class", "hidden");
 }
 
+function removePoop () {
+  document.querySelector("div#poopDiv").setAttribute("class", "hidden");
+}
 
+function removeToiletDiv() {
+  document.querySelector("div#toiletDiv").setAttribute("class", "hidden");
+}
+
+function removeToilet () {
+  document.querySelector("img#gameToilet").removeAttribute("class");
+  document.querySelector("img#gameToilet").setAttribute("class", "toiletRemove");
+  setTimeout(removePoop, 900);
+  setTimeout(removeToiletDiv, 2000);
+}
 function updateStats (happiness, fitness, hunger, brainPower) {
   if (happiness === true) {
     document.querySelector("span#happinessLevel").innerText = newTomagotchi.happiness.handleCleaning();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
     document.querySelector("span#totalHealth").innerText = newTomagotchi.totalHealth;
+    document.querySelector('div#toiletDiv').removeAttribute("class");
+    document.querySelector('img#gameToilet').setAttribute("class", "toilet");
+    setTimeout(removeToilet, 2000);
   } else if (fitness === true) {
     document.querySelector("span#fitnessLevel").innerText = newTomagotchi.fitness.handleExercise();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;

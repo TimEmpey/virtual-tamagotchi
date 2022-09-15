@@ -162,8 +162,8 @@ img{
   bottom: 20%;
   display: block;
   margin-left: 54%;
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
   transform: translate(-50%, -50%);
   animation-name: weights;
   animation-duration: 3s;
@@ -228,4 +228,26 @@ img{
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, -0px); }   
+}
+.toilet{
+  position: absolute;
+  bottom: 13%;
+  display: block;
+  margin-left: -12%;
+  width: 7%;
+  height: 16%;
+  display: inline-block;
+  animation: bounceInUp;
+  animation-duration: 2s;
+}
+.toiletRemove {
+  position: absolute;
+  bottom: 13%;
+  display: block;
+  margin-left: -12%;
+  width: 7%;
+  height: 16%;
+  display: inline-block;
+  animation: bounceOutDown;
+  animation-duration: 2s;
 }
