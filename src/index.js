@@ -36,10 +36,10 @@ function gameOver () {
 }
 
 function setTimer() {
-  setInterval(() => fitness(), 1000000);
-  setInterval(() => happiness(), 15000); 
-  setInterval(() => hunger(), 1000);
-  setInterval(() => brainPower(), 1000);
+  setInterval(() => fitness(), 30000);
+  setInterval(() => happiness(), 45000); 
+  setInterval(() => hunger(), 15000);
+  setInterval(() => brainPower(), 60000);
 }
 
 function happiness() {
@@ -119,19 +119,19 @@ function updateStats (happiness, fitness, hunger, brainPower) {
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
     document.querySelector("span#totalHealth").innerText = newTomagotchi.totalHealth;
     document.querySelector('div#weightDiv').removeAttribute("class");
-    setTimeout(removeWeights, 2000);
+    setTimeout(removeWeights, 5000);
     } else if (hunger === true) {
     document.querySelector("span#hungerLevel").innerText = newTomagotchi.hunger.handleEating();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
     document.querySelector("span#totalHealth").innerText = newTomagotchi.totalHealth;
     document.querySelector('div#foodDiv').removeAttribute("class");
-    setTimeout(removeFood, 2000);
+    setTimeout(removeFood, 5000);
   } else if (brainPower === true) {
     document.querySelector("span#brainLevel").innerText = newTomagotchi.brainPower.handleStudying();
     newTomagotchi.totalHealth = newTomagotchi.happiness.happiness + newTomagotchi.fitness.fitness + newTomagotchi.brainPower.brainPower + newTomagotchi.hunger.hunger;
     document.querySelector("span#totalHealth").innerText = newTomagotchi.totalHealth;
     document.querySelector('div#brainDiv').removeAttribute("class");
-    setTimeout(removeBrain, 2000);
+    setTimeout(removeBrain, 5000);
   }
 }
 
