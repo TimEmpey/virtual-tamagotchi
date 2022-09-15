@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual Tom-agotchi</title>
+</head>
+<body>
+  <div class="bin">
+    <img src="images/tom-background.png" class="game">
+    <button id="startButton" class="start-game">Start Game</button>
+    <div id="hideGame" class="hidden">
+      <img id="shuffleTom" class="shuffle" onClick="window.location.reload();" src="images/shuffle.png">
+      <h2 id="health" class="health-level">Health: <span id="totalHealth"></span>%</h2>
+      <h4 id="happiness" class="happiness-level">Happiness: <span id="happinessLevel"></span></h4>
+      <h4 id="fitness" class="fitness-level">Fitness: <span id="fitnessLevel"></span></h4>
+      <h4 id="brain" class="brain-level">Brain: <span id="brainLevel"></span></h4>
+      <h4 id="hunger" class="hunger-level">Hunger: <span id="hungerLevel"></span></h4>
+      
+      <span id="tom-pic" class="tom-image"></span>
+      
+      <button id="cleaningButton" type="button" class="happiness-button">Flush The Poop!</button>
+      <button id="exerciseButton" type="button" class="fitness-button">Get Shredded!</button>
+      <button id="studyingButton" type="button" class="brain-button">Expand The Brain!</button>
+      <button id="eatingButton" type="button" class="hunger-button">Grub Time!</button>
+    </div>
+    
+    <div class="hidden" id="gameOver">
+      <button id="restartButton" class="restart-game" onClick="window.location.reload();">Restart</button>
+      <img id="gameOverGrave" class="game-over" src="images/game-over.png">
+    </div>
+    <div class="hidden" id="weightDiv">
+      <img id="gameWeights" class="weights" src="images/weights.png">
+    </div>
+    <div class="hidden" id="foodDiv">
+      <img id="gameFood" class="food" src="images/food.png">
+    </div>
+    <div class="hidden" id="brainDiv">
+      <img id="gameBrain" class="brain" src="images/brain.png">
+    </div>
+    <div class="hidden" id="poopDiv">
+      <img id="gamePoop" class="poop" src="images/poop.png">
+    </div>
+    <div id="toiletDiv" class="hidden">
+      <img id="gameToilet" src="images/toilet.png">
+    </div>
+  </div>
+<script src="bundle.js"></script></body>
+</html>
