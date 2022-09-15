@@ -9,13 +9,13 @@ let newTomagotchi = new Health(100, 25, 0, 25, 25, 25);
 function startGame (e) {
   e.preventDefault();
   document.getElementById("startButton").setAttribute("class", "hidden");
+  document.getElementById("gameOver").setAttribute("class", "hidden");
   document.getElementById("hideGame").removeAttribute("class");
   document.querySelector("span#totalHealth").innerText = 100;
   document.querySelector("span#happinessLevel").innerText = 25;
   document.querySelector("span#fitnessLevel").innerText = 25;
   document.querySelector("span#brainLevel").innerText = 25;
   document.querySelector("span#hungerLevel").innerText = 25;
-  document.getElementById("gameOver").setAttribute("class", "hidden");
   choosePic();
   setTimer();
 }
@@ -23,6 +23,7 @@ function startGame (e) {
 function gameOver () {
   if (newTomagotchi.totalHealth === 0) {
     document.getElementById("gameOver").removeAttribute("class");
+    document.getElementById("hideGame").setAttribute("class", "hidden");
   }
 }
 
@@ -120,6 +121,10 @@ function handleClickHunger (e) {
 window.addEventListener("load", function (){
   document.getElementById("startButton").addEventListener("click", startGame);
 });
+
+// window.addEventListener("load", function (){
+//   document.getElementById("restartButton").addEventListener("click", startGame);
+// });
 
 window.addEventListener("load", function (){
   document.getElementById("cleaningButton").addEventListener("click", handleClickHappiness);
